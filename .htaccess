@@ -1,0 +1,36 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /
+	RewriteRule ^user/([^/]*)/([^/]*)$ http://localhost/new/index.php?p=user&name=$1
+	RewriteRule ^logout?$ http://localhost/new/index.php?p=logout [L]
+	RewriteRule ^register?$ http://localhost/new/index.php?p=register [L]
+
+	RewriteRule ^home?$ http://localhost/new/index.php?p=home [L]
+	RewriteRule ^userhome?$ http://localhost/new/index.php?p=userhome [L]
+	RewriteRule ^me?$ http://localhost/new/index.php?p=me [L]
+	RewriteRule ^staff?$ index.php?p=staff [L]
+	RewriteRule ^community?$ index.php?p=community [L]
+	RewriteRule ^client?$ client.php [L]
+	RewriteRule ^clienterror?$ clienterror.php [L]
+	RewriteRule ^maintenance?$ index.php?p=maintenance [L]
+	RewriteRule ^pferde?$ index.php?p=pferde [L]
+	RewriteRule ^couples?$ index.php?p=couples [L]
+	RewriteRule ^vip?$ index.php?p=vip [L]
+	RewriteRule ^bwr?$ index.php?p=bwr [L]
+        RewriteRule ^fansites?$ index.php?p=fansites [L]
+	RewriteRule ^support?$ index.php?p=support [L]
+	RewriteRule ^changename?$ index.php?p=changename [L]
+	RewriteRule ^bonus?$ index.php?p=bonus [L]
+	RewriteRule ^club?$ index.php?p=club [L]
+        RewriteRule ^credits?$ index.php?p=credits [L]
+	RewriteRule ^pricelist?$ index.php?p=pricelist [L]
+	RewriteRule ^admin?$ admin.php [L]
+	RewriteRule ^article/(.*)$ /index.php?p=article&id=$1
+	RewriteRule ^user/(.*)$ /index.php?p=user&username=$1
+	RewriteRule ^room/(.*)$ /index.php?p=room&room=$1
+	RewriteRule ^ref/(.*)$ /index.php?p=ref&username=$1
+	RewriteRule ^settings/(.*)$ /index.php?p=settings&type=$1
+	RewriteRule ^habbo-imaging/badge/([^/]+) /habbo-imaging/badge.php?badge=$1
+	RewriteRule ^habbo-imaging/head/([^/]+) /habbo-imaging/head.php?figure=$1 
+</IfModule>
+ErrorDocument 404 /home
